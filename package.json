@@ -1,6 +1,6 @@
 {
   "name": "ewi-comp",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "React calendar component for integration with Sencha Ext JS applications",
   "main": "index.js",
   "author": "Thorsten Suckow-Homberg <thorsten@suckow-homberg.de>",
