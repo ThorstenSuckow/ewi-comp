@@ -1,18 +1,27 @@
 {
-  "name": "ewi",
-  "version": "1.0.0",
-  "description": "",
+  "name": "ewi-comp",
+  "version": "0.0.1",
+  "description": "React calendar component for integration with Sencha Ext JS applications",
   "main": "index.js",
+  "author": "Thorsten Suckow-Homberg <thorsten@suckow-homberg.de>",
+  "license": "MIT",
   "scripts": {
     "build": "set NODE_ENV=production && webpack",
-    "start": "set NODE_ENV=development && webpack serve"
+    "start": "set NODE_ENV=development && webpack serve",
+    "release": "standard-version",
+    "release:patch": "standard-version --release-as patch && npm run postversion",
+    "release:minor": "standard-version --release-as minor && npm run postversion",
+    "release:major": "standard-version --release-as major && npm run postversion",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ThorstenSuckow/ewi-comp"
+    "url": "git+https://github.com/ThorstenSuckow/ewi-comp.git"
   },
-  "author": "",
-  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThorstenSuckow/ewi-comp/issues"
+  },
+  "homepage": "https://github.com/ThorstenSuckow/ewi-comp#readme",
   "dependencies": {
     "react": "^18.2.0",
     "react-calendar": "^3.7.0"
@@ -23,6 +32,7 @@
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "react-dom": "^18.2.0",
+    "standard-version": "^9.5.0",
     "style-loader": "^3.3.1",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.3"
