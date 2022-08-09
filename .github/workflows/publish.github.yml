@@ -23,7 +23,7 @@ jobs:
         run:
           echo "registry=https://npm.pkg.github.com/ThorstenSuckow" > ~/.npmrc
       - run: |
-          npm whomai
+          npm whoami
           npm publish --access-public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
