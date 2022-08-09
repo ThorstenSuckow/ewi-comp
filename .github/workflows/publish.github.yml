@@ -21,10 +21,9 @@ jobs:
           scope: '@ThorstenSuckow'
       - name: Authenticate with the GitHub Package Registry
         run:
-          echo "registry=https://npm.pkg.github.com/ThorstenSuckow \n //npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+          echo "registry=https://npm.pkg.github.com/ThorstenSuckow" > ~/.npmrc
       - run: |
-          npm i -g change-package-name
-          npx change-package-name @ThorstenSuckow/ewi-comp
-          npm publish
+          npm whomai
+          npm publish --access-public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
