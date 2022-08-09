@@ -8,7 +8,7 @@
   "scripts": {
     "build:lib": "npx rollup -c",
     "build": "set NODE_ENV=production && webpack",
-    "start": "set NODE_ENV=development && webpack serve",
+    "start": "set NODE_ENV=development && webpack serve --open",
     "release": "standard-version",
     "release:patch": "standard-version --release-as patch && npm run postversion",
     "release:minor": "standard-version --release-as minor && npm run postversion",
