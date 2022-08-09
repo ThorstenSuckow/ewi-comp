@@ -22,6 +22,9 @@ jobs:
       - name: Authenticate with the GitHub Package Registry
         run:
           echo "//npm.pkg.github.com:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
-      - run: npm publish
+      - run: |
+          npm i -g change-package-name
+          npx change-package-name @ThorstenSuckow/create-siesta
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
